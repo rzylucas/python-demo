@@ -25,12 +25,12 @@ for i in range(0, len(temp_tu)):
     if temp_tu[i].endswith('c') and temp_tu[i].capitalize().startswith('A'):
         tump.append(temp_tu[i])
 
-for item in dic.values():
+for item in dic.keys():
     # 去除元素空格
-    item = item.strip()
+    dic[item] = dic[item].strip()
     # 以a或A开头,且以c结尾的所有元素
-    if item.endswith('c') and item.capitalize().startswith('A'):
-        tump.append(item)
+    if dic[item].endswith('c') and dic[item].capitalize().startswith('A'):
+        tump.append(dic[item])
 
 for i in range(0, len(tump)):
     tump[i].strip()
